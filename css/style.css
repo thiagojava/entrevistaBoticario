@@ -1,0 +1,198 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700;800&display=swap');
+
+    /* Removendo as definições padrões do CSS*/
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+    /* Section geral*/
+section{
+    position: relative;
+    width: 100%;
+    height: 100vh;
+    overflow: hidden;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    padding: 100px 150px;
+}
+    /* Menu*/
+section header{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding: 20px 100px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 10;
+}
+    /* Menu logomarca*/
+section header .logo{
+    position: relative;
+    color: #fff;
+    font-size: 1.5em;
+    font-weight: 700;
+    text-transform: uppercase;
+    text-decoration: none;
+    letter-spacing: 1px;
+    z-index: 10;
+}
+    /* Menu itens*/
+header ul{
+    position: relative;
+    display: flex;
+    z-index: 10;  
+    list-style: none; 
+    
+}
+header ul li a{
+    color: #fff;
+    font-size: 1.0em;
+    font-weight: 700;
+    text-decoration: none;
+    
+}
+
+    /* Menu toggle*/
+header .menu{
+    font-size: 30px;
+    color: #fff;
+    z-index: 12;
+}
+
+    /* Imagem de fundo*/
+.bg{
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    background-position: center;
+}
+    /* Imagem mulher universitária*/
+.woman{
+    position: absolute;
+    bottom: 0;
+    right: 100px;
+    max-height: 80%;
+    z-index: 100;
+}
+
+    /* Seção do texto*/
+.content{
+    position: absolute;
+    left: 100px;
+    max-width: 600px;
+    z-index: 10;
+}
+.content h2{
+    font-size: 3.5em;
+    color: #fff;
+    font-weight: 400;
+    line-height: 2em;
+}
+.content h2 span{
+    font-weight: 800;
+    font-size: 3.0em;
+    letter-spacing: 5px;
+}
+.content p{
+    color: #fff;
+    margin-top: -15px;
+}
+.content a{
+    display: inline-block;
+    padding: 10px 20px;
+    background: #fff;
+    color: #000;
+    text-decoration: none;
+    text-transform: uppercase;
+    margin-top: 20px;
+    font-weight: 600;
+    letter-spacing: 2px;
+    border-radius: 20px;
+}
+    /* Ícones */
+.icons{
+    position: absolute;
+    right: 0;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 60px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    padding: 20px;
+    background: #fff;
+    border-radius: 20px;
+}
+
+.icons li{
+    list-style: none;
+}
+.icons li a{
+    display: inline-block;
+    transform: scale(0.5);
+}
+.icons ion-icon {
+    font-size: 50px;  
+}
+.icons ion-icon:hover{
+    transition: 0.1s;
+    font-size: 59px;
+} 
+.icons .facebook{
+    color: #1C4B88;
+}
+.icons .instagram{
+    color: #EB0C2E;
+}
+.icons .twitter{
+    color: #1B61E3;
+}
+    /* Seção cards*/
+.textBlocks{
+    position: absolute;
+    bottom: 0;
+    display: flex;
+}
+.textBlocks .block{
+    position: relative;
+    padding: 20px;
+    margin-right: 40px;
+    max-width: 500px;
+    background: rgba(0,0,244,0.2);
+    border-radius: 20px;
+}
+.textBlocks .block h3{
+    font-weight: 600;
+    letter-spacing: 1px;
+    color: #fff;
+}
+.textBlocks .block p{
+    color: #fff;
+}
+    /* Main*/
+.form{
+    background-color: #fff;
+}
+
+    /* Footer*/
+footer .footer{
+    height: 10vh;
+    display: flex;
+    justify-content: center;
+    position: relative;
+    background-image: linear-gradient(225deg, #586fba 0, #1357af 50%, #0041a4 100%);
+    align-items: center;
+    padding: 3px;
+    background-color: DarkSalmon;
+    color: white;
+}
