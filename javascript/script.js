@@ -50,7 +50,7 @@ document.addEventListener("mousemove", function(e)
         e.preventDefault();
         textoMsg.innerText = messaggeErro.join(',');
     }
-    if(messaggeErro <= 0){
+    if(messaggeErro.length <= 0){
         textoMsg.innerText = '';
         succes.innerText = 'Obrigado pelo contato, '+ nome.value;
     }
@@ -66,7 +66,6 @@ document.addEventListener("mousemove", function(e)
             errorInput(email);
             messaggeErro.push('Domínio ultrapassou limite de caracteres');
         }
-        var reg = /[a-zA-Z\[0-9]\u00FF ]+/i;
 
     }
     /* Função para manipular a cor das box */
