@@ -1,351 +1,306 @@
-@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700;800&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700;800&display=swap");
 
-    /* Removendo as definições padrões do CSS*/
-*{
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    font-family: 'Poppins', sans-serif;
+/* Removendo as definições padrões do CSS*/
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
 }
-body{
-    width: auto;
-}
-
-    /* Section geral Topo*/
-section{
-    position: relative;
-    width: 100%;
-    height: 100vh;
-    overflow: hidden;
-    display: flex;
-    justify-content: flex-start;
-    align-items: center;
-    padding: 100px 150px;
+body {
+  width: auto;
 }
 
-
-    /* Menu*/
-section header{
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    padding: 20px 100px;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    z-index: 10;
+/* Section geral*/
+section {
+  position: relative;
+  width: 100%;
+  height: 100vh;
+  overflow: hidden;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  padding: 100px 150px;
 }
 
-
-    /* Menu logomarca*/
-section header .logo{
-    position: relative;
-    color: #fff;
-    font-size: 1.5em;
-    font-weight: 700;
-    text-transform: uppercase;
-    text-decoration: none;
-    letter-spacing: 1px;
-    z-index: 10;
-}
-section header .logo:hover{
-    color: #2273ec;
-    transition: 0.5s;
+/* Menu*/
+section header {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  padding: 20px 100px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  z-index: 10;
 }
 
-
-    /* Menu itens*/
-header ul{
-    position: relative;
-    display: flex;
-    z-index: 10;  
-    list-style: none; 
+/* Menu logomarca*/
+section header .logo {
+  position: relative;
+  color: #fff;
+  font-size: 1.5em;
+  font-weight: 700;
+  text-transform: uppercase;
+  text-decoration: none;
+  letter-spacing: 1px;
+  z-index: 10;
 }
-header ul li a{
-    color: #fff;
-    font-size: 1.0em;
-    font-weight: 700;
-    text-decoration: none;    
-}
-
-    /* Menu toggle*/
-header .menu{
-    font-size: 30px;
-    color: #fff;
-    z-index: 12;
+section header .logo:hover {
+  color: #2273ec;
+  transition: 0.5s;
 }
 
-    /* Imagem de fundo*/
-.bg{
-    position: absolute;
-    bottom: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    background-position: center;
+/* Menu itens*/
+header ul {
+  position: relative;
+  display: flex;
+  z-index: 10;
+  list-style: none;
+}
+header ul li a {
+  color: #fff;
+  font-size: 1em;
+  font-weight: 700;
+  text-decoration: none;
 }
 
-
-    /* Imagem mulher universitária*/
-.woman{
-    position: absolute;
-    bottom: 0;
-    right: 100px;
-    max-height: 80%;
-    z-index: 100;
+/* Menu toggle*/
+header .iconMenu {
+  font-size: 30px;
+  color: #fff;
+  z-index: 12;
 }
 
-    /* Seção do texto*/
-.content{
-    position: absolute;
-    left: 100px;
-    max-width: 600px;
-    z-index: 10;
-}
-.content h2{
-    font-size: 3.5em;
-    color: #fff;
-    font-weight: 400;
-    line-height: 2em;
-}
-.content h2 span{
-    font-weight: 800;
-    font-size: 3.0em;
-    letter-spacing: 5px;
-}
-.content p{
-    color: #fff;
-    margin-top: -15px;
-}
-.content a{
-    display: inline-block;
-    padding: 10px 20px;
-    background: #fff;
-    color: #000;
-    text-decoration: none;
-    text-transform: uppercase;
-    margin-top: 20px;
-    font-weight: 600;
-    letter-spacing: 2px;
-    border-radius: 20px;
+/* Imagem de fundo*/
+.backgroundHome {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  background-position: center;
 }
 
-
-    /* Ícones */
-.icons{
-    position: absolute;
-    right: 0;
-    top: 50%;
-    transform: translateY(-50%);
-    width: 60px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: column;
-    padding: 20px;
-    background: #fff;
-    border-radius: 20px;
+/* Imagem mulher universitária*/
+.imgWomanHome {
+  position: absolute;
+  bottom: 0;
+  right: 100px;
+  max-height: 80%;
+  z-index: 100;
 }
 
-.icons li{
-    list-style: none;
+/* Seção do texto*/
+.textoHome {
+  position: absolute;
+  left: 100px;
+  max-width: 600px;
+  z-index: 10;
 }
-.icons li a{
-    display: inline-block;
-    transform: scale(0.5);
+.textoHome h2 {
+  font-size: 3.5em;
+  color: #fff;
+  font-weight: 400;
+  line-height: 2em;
+}
+.textoHome h2 span {
+  font-weight: 800;
+  font-size: 3em;
+  letter-spacing: 5px;
+}
+.textoHome p {
+  color: #fff;
+  margin-top: -15px;
+}
+.textoHome a {
+  display: inline-block;
+  padding: 10px 20px;
+  background: #fff;
+  color: #000;
+  text-decoration: none;
+  text-transform: uppercase;
+  margin-top: 20px;
+  font-weight: 600;
+  letter-spacing: 2px;
+  border-radius: 20px;
+}
+
+/* Ícones */
+.icons {
+  position: absolute;
+  right: 0;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 60px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  padding: 20px;
+  background: #fff;
+  border-radius: 20px;
+}
+
+.icons li {
+  list-style: none;
+}
+.icons li a {
+  display: inline-block;
+  transform: scale(0.5);
 }
 .icons ion-icon {
-    font-size: 50px;  
+  font-size: 50px;
 }
-.icons ion-icon:hover{
-    transition: 0.1s;
-    font-size: 59px;
-} 
-.icons .facebook{
-    color: #1C4B88;
+.icons ion-icon:hover {
+  transition: 0.1s;
+  font-size: 59px;
 }
-.icons .instagram{
-    color: #EB0C2E;
+.icons .facebook {
+  color: #1c4b88;
 }
-.icons .twitter{
-    color: #1B61E3;
+.icons .instagram {
+  color: #eb0c2e;
 }
-
-
-    /* Seção cards*/
-.textBlocks{
-    position: absolute;
-    bottom: 0;
-    display: flex;
-}
-.textBlocks .block{
-    position: relative;
-    padding: 20px;
-    margin-right: 40px;
-    max-width: 500px;
-    background: rgba(0,0,244,0.2);
-    border-radius: 20px;
-}
-.textBlocks .block h3{
-    font-weight: 600;
-    letter-spacing: 1px;
-    color: #fff;
-}
-.textBlocks .block p{
-    color: #fff;
-}
-    /* Seção de Quem somos */
-.quemSomos{
-    position: relative;
-    width: 100%;
-    height: 100vh;
-    overflow: hidden;
-    display: flex;
-    align-items: center;
-    padding: 100px 150px;
-}
-.titleQuemSomos{
-    position: absolute;
-    top:50px;
-    left: 25%;
-    justify-content: center;
-    align-items: center;
-    padding-bottom: 10px;
-    
-}
-.quemSomos h3{
-    top: 100px;
-    left: -20px;
-    position: relative;
-    font-size: 2em;
-    color: #ffaf00;
-    font-weight: 600;
-    
-}
-.quemSomos p{
-    position: relative;
-    top: 0;
-    font-weight: 400;
-    justify-content: center;
-    align-items: center;
-}
-.quemSomos .titleQuemSomos img{
-    max-width: 150px;
-    border-radius: 100px;
-}
-.quemSomos .man-2 img{
-    max-width: 500px;
-}
-   /* Seção Formulário*/
-.contact{
-    top: 50px;
-}
-.contact img{
-    max-width: 500px;
-    margin-top: 25px;
-}
-.contact h2{
-    position: absolute;
-    top: 10px;
-    right: 40%;
-    font-size: 2em;
-    font-weight: 600;
-    color:#0041a4;
-}
-.contactForm{
-    position: relative;
-    left: 100px;
-    padding: 75px 50px;
-    background: #fff;
-    box-shadow: 0 15px 50px #0041a4;
-    max-width: 500px;
-    margin-top: 50px;
-}
-.contactForm h3{
-    color: #111;
-    font-size: 1.2em;
-    margin-bottom: 20px;
-    font-weight: 500;
-}
-.contactForm .inputBox{
-    position: relative;
-    width: 100%;
-    margin-bottom: 20px;
-}
-.contactForm .inputBox textarea,
-.contactForm .inputBox input{
-
-    width: 100%;
-    border: 1px solidi #555;
-    color: #111;
-    outline: none;
-    font-size: 16px;
-    font-weight: 300;
+.icons .twitter {
+  color: #1b61e3;
 }
 
-    /* Footer*/
-footer .footer{
-    height: 10vh;
-    display: flex;
-    justify-content: center;
-    position: relative;
-    background-image: linear-gradient(225deg, #586fba 0, #1357af 50%, #0041a4 100%);
-    align-items: center;
-    padding: 3px;
-    background-color: DarkSalmon;
-    color: white;
+/* Seção cards*/
+.textCardHome {
+  position: absolute;
+  bottom: 0;
+  display: flex;
 }
-    /* Algumas resposividades */
-@media (max-width :1086px){
-.woman{
-    display: none;
+.textCardHome .textCardHome__card {
+  position: relative;
+  padding: 20px;
+  margin-right: 40px;
+  max-width: 500px;
+  background: rgba(0, 0, 244, 0.2);
+  border-radius: 20px;
 }
-.contact img{
-    display: none;
+.textCardHome .textCardHome__card h3 {
+  font-weight: 600;
+  letter-spacing: 1px;
+  color: #fff;
 }
-.contact{
-    align-items: center;
+.textCardHome .textCardHome__card p {
+  color: #fff;
 }
-@media (max-width :975px){
-.quemSomos .man-2 img{
-        display: none;
-    }
-.quemSomos{
-    height: 70vh;
+/* Seção de Quem somos */
+.quemSomos {
+  position: relative;
+  width: 100%;
+  height: 100vh;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  padding: 100px 150px;
 }
+.quemSomos .titleQuemSomos__quemSomos {
+  position: absolute;
+  top: 50px;
+  left: 25%;
+  justify-content: center;
+  align-items: center;
+  padding-bottom: 10px;
 }
-@media (max-width :880px){
-.content h2 span{
-    font-size: 2em;
+.quemSomos h3 {
+  top: 100px;
+  left: -20px;
+  position: relative;
+  font-size: 2em;
+  color: #ffaf00;
+  font-weight: 600;
 }
+.quemSomos p {
+  position: relative;
+  top: 0;
+  font-weight: 400;
+  justify-content: center;
+  align-items: center;
 }
-@media (max-width :880px){
-    .content h2 span{
-        font-size: 1.5em;
+.quemSomos .quemSomos__imgManQuemSomos img {
+  max-width: 500px;
 }
+/* Seção Formulário*/
+.contact {
+  top: 50px;
 }
-@media (max-width :687px){
-.content p{
-    display: none;    
+.contact img {
+  max-width: 500px;
+  margin-top: 25px;
 }
+.contact h2 {
+  position: absolute;
+  top: 10px;
+  right: 40%;
+  font-size: 2em;
+  font-weight: 600;
+  color: #0041a4;
+}
+.contact__contactForm {
+  position: relative;
+  left: 100px;
+  padding: 75px 50px;
+  background: #fff;
+  box-shadow: 0 15px 50px #0041a4;
+  max-width: 500px;
+  margin-top: 50px;
+}
+.contact__contactForm h3 {
+  color: #111;
+  font-size: 1.2em;
+  margin-bottom: 20px;
+  font-weight: 500;
+}
+.contact__contactForm .inputBox {
+  position: relative;
+  width: 100%;
+  margin-bottom: 20px;
+}
+.contact__contactForm .inputBox textarea,
+.contact__contactForm .inputBox input {
+  width: 100%;
+  border: 1px solidi #555;
+  color: #111;
+  outline: none;
+  font-size: 16px;
+  font-weight: 300;
 }
 
+/* Footer*/
+footer .footer {
+  height: 10vh;
+  display: flex;
+  justify-content: center;
+  position: relative;
+  background-image: linear-gradient(
+    225deg,
+    #586fba 0,
+    #1357af 50%,
+    #0041a4 100%
+  );
+  align-items: center;
+  padding: 3px;
+  color: white;
 }
 /* Estilização de erros */
-#erro{
-    color: #e74c3c;
-    position: relative;
-    font-size: 14px;
-    margin-top: 5px;
+#textoErroForm {
+  color: #e74c3c;
+  position: relative;
+  font-size: 14px;
+  margin-top: 5px;
 }
-#sucess{
-    color: green;
-    position: relative;
-    font-size: 14px;
-    margin-top: 5px;
+#textoSucessoForm {
+  color: green;
+  position: relative;
+  font-size: 14px;
+  margin-top: 5px;
 }
-.errorInput{
-    border: 2px solid #e74c3c;
+.errorInputBox {
+  border: 2px solid #e74c3c;
 }

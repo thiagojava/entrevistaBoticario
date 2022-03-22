@@ -1,82 +1,62 @@
-    /* Função para mover o texto e a imagem */
-document.addEventListener("mousemove", function(e)
-{
-    const bg = document.querySelector('.bg');
-    const woman = document.querySelector('.woman');
-    const content = document.querySelector('.content');
+/* Função para mover o texto e a imagem */
+document.addEventListener("DOMContentLoaded", function () {
+  document.addEventListener("mousemove", function (e) {
+    const backgroundHome = document.querySelector(".backgroundHome");
+    const imgWomanHome = document.querySelector(".imgWomanHome");
+    const textoHome = document.querySelector(".textoHome");
+    backgroundHome.style.width = 100 + e.pageX / 100 + "%";
+    backgroundHome.style.height = 100 + e.pageX / 100 + "%";
 
-    bg.style.width = 100 + e.pageX/100 + '%';
-    bg.style.height = 100 + e.pageX/100 + '%';
-    woman.style.right = 100 + e.pageX/2 + 'px';
-    content.style.left = 100 + e.pageX/2.9 + 'px';
-})
+    imgWomanHome.style.right = 100 + e.pageX / 2 + "px";
+    textoHome.style.left = 100 + e.pageX / 2.9 + "px";
+  });
 
-// Validação Formulário
-    const btt = document.getElementById('button');
-    btt.addEventListener('click',(e) =>{
-    const email = document.getElementById('email');
-    const mensagem = document.getElementById('mensagem');
-    const textoMsg = document.getElementById('erro');
-    const nome = document.getElementById('nome');
-    const succes = document.getElementById('sucess');
+  const botaoForm = document.getElementById("button");
+  botaoForm.addEventListener("click", (e) => {
+    const regexEmail =
+      /^(\w[A-Za-z0-9.-_]{1,31})@(\w[A-Za-z0-9.]{1,15})+(\.\w[a-z]{1,2})+$/;
+    const textoErroForm = document.getElementById("textoErroForm");
+    const textoSucessoForm = document.getElementById("textoSucessoForm");
+
     let messaggeErro = [];
+    let itensForm = document.querySelectorAll("div.inputBox > input");
 
+    /* caso adicione um input novo no form ele automaticamente faz as validações*/
+    itensForm.forEach((element) => {
+      if (element.value == "") {
+        errorInput(document.getElementById(element.id));
+        messaggeErro.push("Digite um " + element.id);
+      } else {
+        limpaErrorInput(document.getElementById(element.id));
+      }
+      if (element.id == "email" && element.value.length > 0) {
+        let validaRegex = regexEmail.test(element.value);
+        if (validaRegex == false) {
+          errorInput(document.getElementById(element.id));
+          messaggeErro.push("Email inválido");
+        }
+      }
+    });
+    verificaMensagemErro();
 
-    if(nome.value == ''){
-        errorInput(nome);
-        messaggeErro.push('Digite um nome');
-    }else{
-        limpaErrorInput(nome);
-    }    
-    if(mensagem.value == ''){
-        errorInput(mensagem);
-        messaggeErro.push('Digite uma mensagem');
-    }else{
-        limpaErrorInput(mensagem)
-    }
-    if(email.value == ''){
-        errorInput(email);
-        messaggeErro.push('Digite seu email');
-    }
-    if(email.value.indexOf("@") == -1 || email.value.indexOf(".") == -1){
-        errorInput(email);
-        messaggeErro.push('Email inválido');
-    }else{
-        limpaErrorInput(email);
-        validationEmail(email);
-    }
-
-    if(messaggeErro.length > 0){
+    function verificaMensagemErro() {
+      /* Verifica qual mensagem apresentar*/
+      if (messaggeErro.length > 0) {
         e.preventDefault();
-        textoMsg.innerText = messaggeErro.join(',');
+        textoErroForm.innerText = messaggeErro.join(", ");
+      }
+      if (messaggeErro.length <= 0) {
+        textoErroForm.innerText = "";
+        textoSucessoForm.innerText = "Obrigado pelo contato, " + nome.value;
+      }
     }
-    if(messaggeErro.length <= 0){
-        textoMsg.innerText = '';
-        succes.innerText = 'Obrigado pelo contato, '+ nome.value;
-    }
-    /* Capturando antes do @ e depois do @ */
-    function validationEmail(email){
-        let usuario = email.value.substring(0, email.value.indexOf("@"));
-        let dominio = email.value.substring(email.value.indexOf("@")+ 1, email.value.length);
-        if(usuario.length > 32){
-            errorInput(email);
-            messaggeErro.push('Usuário ultrapassou limite de caracteres');
-        }
-        if(dominio.length > 16){
-            errorInput(email);
-            messaggeErro.push('Domínio ultrapassou limite de caracteres');
-        }
+  });
 
-    }
-    /* Função para manipular a cor das box */
-    function errorInput(id){
-        id.classList.add("errorInput");
-    }
-    function limpaErrorInput(id){
-        id.classList.remove("errorInput");
-        }
-
+  /* Função para manipular as cores das box's */
+  function errorInput(id) {
+    id.classList.add("errorInputBox");
+  }
+  function limpaErrorInput(id) {
+    id.classList.remove("errorInputBox");
+  }
 });
-
-
-
